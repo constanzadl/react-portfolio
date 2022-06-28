@@ -18,11 +18,13 @@ export const Header = () => {
             data-dropdown-toggle="dropdown"
           >
             <span className="sr-only">Open user menu</span>
-            <img
-              className="w-8 h-8 rounded-full"
-              src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-              alt="user photo"
-            />
+            <NavLink to="comments">
+              <img
+                className="w-8 h-8 rounded-full"
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                alt="user photo"
+              />
+            </NavLink>
           </button>
           <button
             data-collapse-toggle="mobile-menu-2"
