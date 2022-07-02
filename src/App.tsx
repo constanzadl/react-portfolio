@@ -11,7 +11,7 @@ import { UserComments } from 'pages/comments/comments'
 
 const App = () => {
   return (
-    <div className="bg-violet-200">
+    <div className="bg-violet-200 dark:bg-zinc-700">
       <Header />
       <main className="pt-6 md:pt-16">
         <Routes>

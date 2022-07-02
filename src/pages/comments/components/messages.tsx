@@ -31,7 +31,7 @@ export const Messages = () => {
   }, [messages])
 
   return (
-    <div className="my-8">
+    <div className="my-8 dark:text-white">
       <p>Messages:</p>
       <div className="flex flex-col">
         {messages.map((msg: any, index) => {

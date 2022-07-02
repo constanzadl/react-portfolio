@@ -22,14 +22,14 @@ export const Comment = () => {
 
   return (
     <div>
-      <form className="flex flex-col w-full text-white">
+      <form className="flex flex-col w-full text-white dark:text-violet-400">
         <label htmlFor="msg-from">From:</label>
         <input
           id="msg-from"
           type="text"
           value={from}
           onChange={(e) => setFrom(e.target.value)}
-          className="p-1 w-1/2 text-violet-400 rounded-md border border-violet-600"
+          className="p-1 w-1/2 text-violet-400 dark:text-violet-800 rounded-md border border-violet-600 dark:border-violet-400"
         ></input>
         <label htmlFor="msg-msg">Message:</label>
         <input
@@ -37,12 +37,12 @@ export const Comment = () => {
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="p-1 w-1/2 text-violet-400 rounded-md border border-violet-600"
+          className="p-1 w-1/2 text-violet-400 dark:text-violet-800 rounded-md border border-violet-600"
         ></input>
       </form>
       <button
         onClick={() => MakeMessage()}
-        className="p-2 mt-4 w-32 text-violet-600 hover:text-white bg-white hover:bg-violet-600 rounded-md border border-violet-600"
+        className="p-2 mt-4 w-32 text-violet-600 hover:text-white dark:text-white bg-white hover:bg-violet-600 dark:bg-violet-800 dark:hover:bg-violet-500 rounded-md border border-violet-600 dark:border-violet-800"
       >
         Submit
       </button>

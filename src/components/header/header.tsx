@@ -7,17 +7,16 @@ export const Header = () => {
 
   /*Function to hide mobile and user menu when opening the other one*/
   return (
-    <nav className="fixed py-2.5 px-2 w-full bg-violet-200 rounded border-violet-200 sm:px-4">
+    <nav className="fixed py-2.5 px-2 w-full bg-violet-200 dark:bg-zinc-700 rounded border-violet-200 dark:border-zinc-700 sm:px-4 ">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <div className="flex items-center md:order-2">
           <button
             type="button"
-            className="flex mr-3 text-sm bg-violet-500 rounded-full focus:ring-4 focus:ring-violet-500 dark:focus:ring-violet-900 md:mr-0"
+            className="flex mr-3 text-sm bg-violet-500 rounded-full hover:ring-4 focus:ring-4 hover:ring-violet-700 focus:ring-violet-500 dark:hover:ring-white dark:focus:ring-violet-300 md:mr-0"
             id="user-menu-button"
             aria-expanded="false"
             data-dropdown-toggle="dropdown"
           >
-            <span className="sr-only">Open user menu</span>
             <NavLink to="comments">
               <img
                 className="w-8 h-8 rounded-full"
@@ -69,7 +68,7 @@ export const Header = () => {
             <li>
               <NavLink
                 to="/"
-                className="block py-2 pr-4 pl-3 text-violet-700 dark:text-violet-400 dark:hover:text-white hover:bg-violet-50 dark:hover:bg-violet-700 border-b border-violet-100 dark:border-violet-700 md:p-0 md:hover:text-blue-700 md:dark:hover:text-white md:hover:bg-transparent md:dark:hover:bg-transparent md:border-0"
+                className="block py-2 pr-4 pl-3 text-white hover:text-violet-700 dark:text-violet-400 dark:hover:text-white hover:bg-violet-50 dark:hover:bg-violet-700 border-b border-violet-100 dark:border-violet-700 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:border-0"
                 aria-current="page"
               >
                 Home
@@ -78,7 +77,7 @@ export const Header = () => {
             <li>
               <NavLink
                 to="skills"
-                className="block py-2 pr-4 pl-3 text-violet-700 dark:text-violet-400 dark:hover:text-white hover:bg-violet-50 dark:hover:bg-violet-700 border-b border-violet-100 dark:border-violet-700 md:p-0 md:hover:text-blue-700 md:dark:hover:text-white md:hover:bg-transparent md:dark:hover:bg-transparent md:border-0"
+                className="block py-2 pr-4 pl-3 text-white hover:text-violet-700 dark:text-violet-400 dark:hover:text-white hover:bg-violet-50 dark:hover:bg-violet-700 border-b border-violet-100 dark:border-violet-700 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:border-0"
               >
                 Skils
               </NavLink>
@@ -86,7 +85,7 @@ export const Header = () => {
             <li>
               <NavLink
                 to="contact"
-                className="block py-2 pr-4 pl-3 text-violet-700 dark:text-violet-400 dark:hover:text-white hover:bg-violet-50 dark:hover:bg-violet-700 border-b border-violet-100 dark:border-violet-700 md:p-0 md:hover:text-blue-700 md:dark:hover:text-white md:hover:bg-transparent md:dark:hover:bg-transparent md:border-0"
+                className="block py-2 pr-4 pl-3 text-white hover:text-violet-700 dark:text-violet-400 dark:hover:text-white hover:bg-violet-50 dark:hover:bg-violet-700 border-b border-violet-100 dark:border-violet-700 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:border-0"
               >
                 Contact
               </NavLink>

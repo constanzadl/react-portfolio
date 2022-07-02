@@ -2,7 +2,7 @@ import { Experience } from './school'
 
 export const Education = () => {
   return (
-    <div className="bg-violet-100">
+    <div className="dark:text-white bg-violet-100 dark:bg-zinc-600">
       <div className="p-12 lg:p-20">
         <div className="text-6xl">Education and Experience</div>
         <div className="grid grid-cols-1 gap-4 pt-6 lg:grid-cols-2">
