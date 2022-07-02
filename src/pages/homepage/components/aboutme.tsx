@@ -1,10 +1,12 @@
+import profile from '../media/profile.png'
+
 export const AboutMe = () => {
   return (
     <div className="flex flex-wrap justify-between content-center p-20">
       <div className="flex justify-center p-4 w-full lg:w-1/2">
         <img
           className="w-96 h-auto rounded-md shadow-2xl shadow-violet-400 dark:shadow-slate-700 bg-blend-normal"
-          src="src/pages/homepage/media/profile.png"
+          src={profile}
           alt="Constanza"
         />
       </div>
