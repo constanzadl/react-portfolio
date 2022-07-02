@@ -4,7 +4,16 @@ import { useState } from 'react'
 export const Header = () => {
   const [active, setActive] = useState(false)
   const toggleMobile = active ? '' : 'hidden'
+  const [darkMode, setDarkMode] = useState(false)
 
+  const toggleMode = () => {
+    setDarkMode(!darkMode)
+    if (darkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
   /*Function to hide mobile and user menu when opening the other one*/
   return (
     <nav className="fixed py-2.5 px-2 w-full bg-violet-200 dark:bg-zinc-700 rounded border-violet-200 dark:border-zinc-700 sm:px-4 ">
@@ -58,6 +67,9 @@ export const Header = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
+          </button>
+          <button className="m-2" onClick={() => toggleMode()}>
+            Dark/Light
           </button>
         </div>
         <div
