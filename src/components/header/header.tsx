@@ -1,19 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
-
+import { ToggleMode } from './toggleMode'
 export const Header = () => {
   const [active, setActive] = useState(false)
   const toggleMobile = active ? '' : 'hidden'
-  const [darkMode, setDarkMode] = useState(false)
 
-  const toggleMode = () => {
-    setDarkMode(!darkMode)
-    if (darkMode) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }
   /*Function to hide mobile and user menu when opening the other one*/
   return (
     <nav className="fixed py-2.5 px-2 w-full bg-violet-200 dark:bg-zinc-700 rounded border-violet-200 dark:border-zinc-700 sm:px-4 ">
@@ -26,7 +17,7 @@ export const Header = () => {
             aria-expanded="false"
             data-dropdown-toggle="dropdown"
           >
-            <NavLink to="comments">
+            <NavLink to="login">
               <img
                 className="w-8 h-8 rounded-full"
                 src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
@@ -68,9 +59,7 @@ export const Header = () => {
               ></path>
             </svg>
           </button>
-          <button className="m-2" onClick={() => toggleMode()}>
-            Dark/Light
-          </button>
+          <ToggleMode />
         </div>
         <div
           className={`${toggleMobile} justify-between items-center w-full md:flex md:order-1 md:w-auto`}

@@ -8,6 +8,8 @@ import { Header } from './components/header/header'
 import { Footer } from './components/footer/footer'
 import Layout from './components/layout'
 import { UserComments } from 'pages/comments/comments'
+import { MainAuth } from 'pages/authentication/mainAuth'
+import { DiscordAuth } from 'services/discord'
 
 const App = () => {
   return (
@@ -21,6 +23,7 @@ const App = () => {
             <Route path="skills" element={<Skills />} />
             <Route path="comments" element={<UserComments />} />
             <Route path="*" element={<Error />} />
+            <Route path="login" element={<MainAuth />} />
           </Route>
         </Routes>
       </main>

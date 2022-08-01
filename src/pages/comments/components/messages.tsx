@@ -5,19 +5,16 @@ import { useState, useEffect } from 'react'
 export const Messages = () => {
   const [messages, setMessages] = useState([])
   const [fetched, setFetched] = useState(false)
-
   useEffect(() => {
     const getFetch = async () => {
       setFetched(true)
       const fetchedMessages: any = []
       const querySnapshot = await getDocs(collection(db, 'messages'))
-      console.log(querySnapshot)
       querySnapshot.forEach((doc) => {
         fetchedMessages.push({
           message: doc.data().message,
           from: doc.data().from
         })
-        console.log(`${doc.id} => ${doc.data()}`)
       })
       setMessages(fetchedMessages)
     }
@@ -25,10 +22,6 @@ export const Messages = () => {
       getFetch()
     }
   }, [])
-
-  useEffect(() => {
-    console.log(messages)
-  }, [messages])
 
   return (
     <div className="my-8 dark:text-white">

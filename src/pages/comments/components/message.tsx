@@ -13,11 +13,13 @@ export const Comment = () => {
         from: from,
         message: message
       })
-
       console.log('Document written with ID: ', docRef.id)
     } catch (e) {
       console.error('Error adding document: ', e)
     }
+    setMessage('')
+    setFrom('')
+    //rerender list
   }
 
   return (
